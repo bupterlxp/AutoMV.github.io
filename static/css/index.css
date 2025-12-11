@@ -303,6 +303,19 @@ body {
     border-top: 1px solid var(--border-color);
 }
 
+.carousel.results-carousel .item[class*='item-video'] {
+  max-width: clamp(720px, 81vw, 1080px);
+  margin: 0.75rem auto;
+  padding: 1rem;
+}
+
+.carousel.results-carousel .item[class*='item-video'] video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
 /* Pagination and Misc Improvements */
 .slider-pagination .slider-page {
   background: var(--primary-color);
@@ -858,6 +871,107 @@ a:focus {
 @media screen and (max-width: 768px) {
   .cover-content h1 { font-size: clamp(2.4rem, 7vw, 3rem); letter-spacing: 0.08em; }
   .cover-content p { font-size: 1.05rem; padding: 0 18px; }
+}
+
+
+/* MAP badge styling */
+.map-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.45rem 1.2rem 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), transparent 55%),
+              linear-gradient(120deg, rgba(23, 32, 74, 0.9), rgba(32, 16, 65, 0.7));
+  box-shadow: 0 10px 25px rgba(24, 33, 72, 0.35), inset 0 0 0 1px rgba(185, 206, 255, 0.2);
+  backdrop-filter: blur(6px);
+  position: relative;
+  isolation: isolate;
+}
+
+.map-badge::after {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  background: radial-gradient(circle, rgba(120, 199, 255, 0.45), transparent 60%);
+  filter: blur(18px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.map-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 6px 12px rgba(24, 32, 75, 0.4));
+}
+
+.map-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.map-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
+.map-letter {
+  font-family: 'Audiowide', 'Inter', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-block;
+  text-shadow: 0 10px 25px rgba(18, 28, 78, 0.5);
+}
+
+.map-letter-m {
+  background: linear-gradient(115deg, #facc15, #f97316 65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.map-letter-a {
+  background: linear-gradient(115deg, #38bdf8, #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.map-letter-p {
+  background: linear-gradient(115deg, #a855f7, #ec4899 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.map-letter-divider {
+  color: #ef4444;
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+  transform: translateY(-2px);
+  text-shadow: 0 8px 18px rgba(190, 32, 62, 0.4);
+}
+
+@media screen and (max-width: 640px) {
+  .map-badge {
+    gap: 0.5rem;
+    padding: 0.35rem 0.8rem;
+  }
+
+  .map-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .map-letter {
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+  }
 }
 
 
