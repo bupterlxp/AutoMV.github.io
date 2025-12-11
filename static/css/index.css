@@ -131,7 +131,9 @@ body {
     font-family: 'Inter', sans-serif !important;
     font-weight: 800 !important;
     color: var(--text-primary) !important;
-    margin-bottom: 2.5rem !important;
+  margin: 0 auto 2.5rem !important;
+  max-width: clamp(520px, 70vw, 980px);
+  text-align: center;
     line-height: 1.2 !important;
     letter-spacing: -0.02em;
     background: -webkit-linear-gradient(135deg, var(--text-primary), var(--primary-color));
@@ -246,12 +248,13 @@ body {
 }
 
 .title.is-3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
-    position: relative;
-    display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 2rem;
+  text-align: center;
 }
 
 .title.is-3::after {
@@ -605,6 +608,11 @@ code {
     font-size: 2.5rem !important;
     line-height: 1.2 !important;
     margin-bottom: 1.5rem !important;
+    max-width: 100%;
+  }
+
+  .title.is-3 {
+    margin: 0 auto 1.75rem;
   }
   
   .publication-authors {
@@ -652,6 +660,11 @@ code {
 @media screen and (max-width: 480px) {
   .publication-title {
     font-size: 2rem !important;
+    max-width: 100%;
+  }
+
+  .title.is-3 {
+    margin: 0 auto 1.5rem;
   }
   
   .hero-body {

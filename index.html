@@ -326,7 +326,7 @@
             Music-to-Video (M2V) generation for full-length songs faces significant challenges. Existing methods produce short, disjointed clips, failing to align visuals with musical structure, beats, or lyrics, and lack temporal consistency. We propose AutoMV, a multi-agent system that generates full music videos (MVs) directly from a song. AutoMV first analyzes the audio to extract beats, structure, and time-stamped lyrics. A Gemini Director agent then intelligently segments the song and generates a time-aligned visual script. This script guides a generation module using specialized APIs (e.g., for content and lip-syncing). Critically, a Gemini Verifier agent assesses the generated clips for script alignment and physical feasibility, iterating to select the best output. Evaluating this complex, long-form task is non-trivial; we introduce a new benchmark and a comprehensive LLM-based metric (LLM-Score) across 10 artistic and technical criteria. 
 AutoMV first applies music processing tools to extract musical attributes, such as structure, vocal tracks, and time-aligned lyrics, and constructs these features as contextual inputs for following agents. The screenwriter Agent and director Agent then use this information to design short script, define character profiles in a shared external bank, and specify camera instructions. Subsequently, these agents call the image generator for keyframes and different video generators for ``story'' or ``singer'' scenes. A Verifier Agent evaluates their output, enabling multi-agent collaboration to produce a coherent long-form MV.
 To evaluate M2V generation, we further propose a benchmark with four high-level categories (Music Content, Technical, Post-production, Art) and twelve ine-grained criteria. This benchmark was applied to compare commercial products, AutoMV, and human-directed MVs with expert human raters: AutoMV outperforms current baselines significantly across all four categories, narrowing the gap to professional MVs. 
-Finally, we investigate using large multimodal models as automatic MV judges; while promising, they still lag behind human expert, highlighting room for future work. Keywords:  LLM agent, music video, video generation, visual-audio alignment
+Finally, we investigate using large multimodal models as automatic MV judges; while promising, they still lag behind human expert, highlighting room for future work.
           </p>
         </div>
       </div>
@@ -367,7 +367,7 @@ Finally, we investigate using large multimodal models as automatic MV judges; wh
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">More Video Examples</h2>
+  <h2 class="title is-3 has-text-centered">More Video Examples</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <!-- TODO: Add poster image for better preview -->
