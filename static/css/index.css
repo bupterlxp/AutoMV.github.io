@@ -782,6 +782,7 @@ a:focus {
   object-fit: cover; 
   z-index: -3;
   filter: saturate(120%) brightness(0.85);
+  transform-origin: center;
 }
 
 #cover-overlay {
