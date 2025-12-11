@@ -294,14 +294,6 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#benchmark" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-chart-line"></i>
-                    </span>
-                    <span>Benchmark</span>
-                  </a>
-                </span>
-                <span class="link-block">
                   <a href="https://github.com/bupterlxp/AutoMV" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -446,10 +438,16 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Quality Against Baselines</h2>
     <p class="content has-text-justified">
-      AutoMV outperforms commercial systems such as Revid.ai-base and OpenArt-story across every AutoMV-Bench dimension, approaching expert-directed productions. The table below summarizes cost, generation time, beat alignment (IB), and twelve sub-metrics spanning Music Content (T<sub>E</sub>, P<sub>O</sub>, C<sub>O</sub>, A<sub>R</sub>) and Human Study scores.
+      AutoMV outperforms commercial systems such as Revid.ai-base and OpenArt-story across every AutoMV-Bench dimension, approaching expert-directed productions. The table below summarizes cost, generation time, beat alignment (IB), and four category sub-metrics spanning Music Content (T<sub>E</sub>, P<sub>O</sub>, C<sub>O</sub>, A<sub>R</sub>) and Human Study scores.
     </p>
     <figure class="image">
       <img src="static/images/result.png" alt="Benchmark table comparing AutoMV with commercial baselines and human experts across cost, time, and evaluation metrics." loading="lazy">
+    </figure>
+    <p class="content has-text-justified">
+      To ensure that automatic metrics mirror expert judgement, we correlate LLM-Score with human annotations. Gemini 3.5 Pro-Preview delivers the strongest alignment—reaching up to 0.74 on performance artistry—suggesting that our benchmark faithfully reflects human preferences across the twelve criteria.
+    </p>
+    <figure class="image is-16by9">
+      <img src="static/images/model_vs_human_pearson_correlation_01.png" alt="Heatmap of Pearson correlation coefficients between human raters and multimodal models across AutoMV-Bench metrics." loading="lazy">
     </figure>
     <p class="content has-text-justified">
       AutoMV achieves the highest IB score (24.4%) while maintaining competitive Te<sub>G</sub>, Po<sub>G</sub>, Co<sub>G</sub>, and Ar<sub>G</sub> ratings. Ablations confirm that lyrics grounding, the character bank, and the verifier agent each contribute measurable gains, pushing AutoMV to a 2.42 expert score—closing most of the gap to human-directed references.
